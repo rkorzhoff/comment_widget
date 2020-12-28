@@ -2,47 +2,96 @@
   box-sizing: border-box;
   padding: 0;
 }
-li {
-  list-style: none;
+input,
+textarea {
+  outline: none;
 }
-.checked {
-  text-decoration: line-through;
-  cursor: pointer;
+body {
+  background: linear-gradient(#e66465, #9198e5) no-repeat;
+  height: 100vh;
 }
-
 #root {
   display: flex;
   justify-content: center;
 }
-.wrapper {
-  margin-top: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 1000px;
-}
-.comsList {
-  display: flex;
-  min-width: 40%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.listItem {
-  text-align: center;
+.widget__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  align-items: center;
+
+  width: 600px;
+  min-height: 400px;
   border: 1px solid #000000;
-  padding: 10px 30px;
-  width: 100%;
-}
-.listItem:not(:last-child) {
-  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  font-family: sans-serif;
 }
 
-.comInput {
-  text-align: center;
-  padding: 20px 10px;
-  width: 40%;
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+
+  min-width: 400px;
+}
+.input__label {
+  text-transform: uppercase;
+}
+.input__text {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  text-align: left;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.message {
+  resize: none;
+}
+
+.input__addButton {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.comment__wrapper {
+  margin-top: 20px;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.comment__text {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.comment__date {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.comment__remove {
+  position: absolute;
+  right: -20px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  color: red;
+  font-weight: 700;
+  transform: translate(20px, -5px);
 }
 
